@@ -24,7 +24,7 @@ def login():
         login_validation, login_status=login_obj.check_login_details(user_name,password)
         if login_status == 1:
             return ({"message":login_validation,"status_code":1}),401
-        return ({"message":login_validation,"status_code":0}),200
+        return ({"message":"Successfully Logged In","userid":login_validation,"status_code":0}),200
     except Exception as e:
         print(e)
         return ({"message":login_validation,"status_code":0}),500
