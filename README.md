@@ -1,7 +1,7 @@
 # InkWell
 # API Documentation
 
-Welcome to the documentation for our API. This document outlines the available endpoints and their functionalities.
+Welcome to the documentation for our InkWell note taking application API. This document outlines the available endpoints and their functionalities.
 
 ## Endpoints
 
@@ -69,6 +69,82 @@ Retrieves all the changes associated with a specific note. Users can provide the
 - **500 Internal Server Error**: Unexpected server error.
 
 ---
+
+# Running the Python API
+
+To run the Python API file, follow these steps:
+
+1. Ensure you have Python installed on your system. You can download Python from the [official Python website](https://www.python.org/downloads/). Also  Ensure you have MongoDB installed on your system. You can download MongoDB from the [official MongoDB website](https://www.mongodb.com/try/download/community). 
+
+2. Please create database with name "inkwell"
+
+3. Navigate to the directory containing your Python API file using the terminal or command prompt.
+
+4. Install require packages using follwing command :
+
+```bash
+
+pip install -r requirement.txt
+```
+
+4. Run the Python API file using the following command:
+
+```bash
+
+python api_file.py
+```
+
+Replace `api_file.py` with the name of your Python API file.
+
+4. Once the API server is running, you can use `curl` commands or any API testing tool to interact with the endpoints.
+
+## Curl Commands for APIs
+
+### 1. POST /login
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"username": "your_username/ your email", "password": "your_password"}' http://localhost:5100/login
+```
+
+### POST /signup
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{"username": "your_username", "password": "your_password", "email": "your_email@example.com"}' http://localhost:5100/signup
+```
+
+
+### POST /notes/create
+
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{{"userid": "logged in user id","title":"note title", "content":"content of your note"}' http://localhost:5100/notes/create
+```
+
+### GET /notes/{id}
+
+```bash
+curl -X GET -H "Content-Type: application/json" -d '{{"userid": "logged in user id"}' http://localhost:5100/notes/{noteid}
+```
+
+
+### POST /notes/share
+```bash
+curl -X POST -H "Content-Type: application/json" -d '{{"userid": "logged in user id","noteid":"note id to share with users", "userid_list":["id of user 1", "id of user 2"]}' http://localhost:5100/notes/share
+```
+
+
+
+### PUT /notes/{id}
+```bash
+curl -X PUT -H "Content-Type: application/json" -d '{{"userid": "logged in user id","title":"note title", "content":"content of your note"}' http://localhost:5100/notes/{noteid}
+```
+
+
+### GET /notes/version-history/{id}
+```bash
+curl -X GET -H "Content-Type: application/json" -d '{{"userid": "logged in user id"}' http://localhost:5100/notes/version-history/{noteid}
+```
+
+These curl commands can be used in the terminal or command prompt to interact with your API endpoints.
 
 If you have any questions or need further assistance, please don't hesitate to contact me.
 
