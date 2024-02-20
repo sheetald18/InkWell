@@ -76,7 +76,7 @@ To run the Python API file, follow these steps:
 
 1. Ensure you have Python installed on your system. You can download Python from the [official Python website](https://www.python.org/downloads/). Also  Ensure you have MongoDB installed on your system. You can download MongoDB from the [official MongoDB website](https://www.mongodb.com/try/download/community). 
 
-2. Please create database with name "inkwell"
+2. Please create database with name "inkwell" in MongoDB along with 2 collections named as "users" and "notes" under same database.
 
 3. Navigate to the directory containing your Python API file using the terminal or command prompt.
 
