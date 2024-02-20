@@ -78,7 +78,7 @@ To run the Python API file, follow these steps:
 
 2. Please create database with name "inkwell" in MongoDB along with 2 collections named as "users" and "notes" under same database.
 
-3. Navigate to the directory containing your Python API file using the terminal or command prompt.
+3. Clone the repo and navigate to the directory containing your Python API file using the terminal or command prompt.
 
 4. Install require packages using follwing command :
 
